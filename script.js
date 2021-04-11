@@ -39,7 +39,7 @@ function generatePassword() {
     return;
   }
 
-//when they select an option they get a password with "that" character
+//true or false with selecting 
   if(selectLowercase === true) {
     alert("You have selected lowercase characters.");
     masterCharacters.push (lowercase)
@@ -48,7 +48,7 @@ function generatePassword() {
   else {
     alert("No lowercase")
   }
-
+//uppercase
   if (selectUppercase) {
     alert("You have selected uppercase characters.");
     masterCharacters.push (uppercase)
@@ -57,32 +57,55 @@ function generatePassword() {
   else{
     alert("No uppercase.")
   }
+
+//numbers
   if (selectNumeric) {
     alert("You have selected numeric characters.");
     masterCharacters.push (num)
     console.log("master is" +masterCharacters)
     
   }
+  else {
+    alert("No numbers.")
+  }
 
-
+ //symbols
   if (selectSymbols) {
     alert("You have selected special characters.");
     masterCharacters.push (symbols)
     console.log("master is" +masterCharacters)
-    
   }
 
-}
-
-
-//verify if the password is valid
-function verifyPassword() {
-  var generatePassword = document.getElementById("password").value;
-
-  if (generatePassword == "") {
-    document.getElementById("message").innerHTML = "**Fill the password please!";
-    return false;
+  else {
+    alert("No special characters.")
   }
+
+  //for loop
+  var pass_array = [];
+
+    for(i = 0; i < length; i++){
+      var upper_final = Math.floor(Math.random() * uppercase.length + 1);
+      var lower_final = Math.floor(Math.random() * lowercase.length + 1);
+      var num_final = Math.floor(Math.random() * num.length + 1);
+      var special_final = Math.floor(Math.random() * symbols.length + 1);
+
+        if(selectUppercase === true) {
+          pass_array.push(uppercase);
+        }
+
+        if(selectLowercase === true){
+          pass_array.push(lower_final);
+        }
+
+        if(selectNumeric === true){
+          pass_array.push(num_final);
+        }
+
+        if(selectSymbols === true){
+          pass_array.push(special_final);
+        }
+    }
+
 }
 
 //display the password
