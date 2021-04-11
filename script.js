@@ -89,22 +89,25 @@ function generatePassword() {
       var num_final = Math.floor(Math.random() * num.length + 1);
       var special_final = Math.floor(Math.random() * symbols.length + 1);
 
-        if(selectUppercase === true) {
-          pass_array.push(uppercase);
-        }
+      if(selectUppercase === true) {
+        pass_array.push(uppercase);
+      }
 
-        if(selectLowercase === true){
-          pass_array.push(lower_final);
-        }
+      if(selectLowercase === true){
+        pass_array.push(lower_final);
+      }
 
-        if(selectNumeric === true){
-          pass_array.push(num_final);
-        }
+      if(selectNumeric === true){
+        pass_array.push(num_final);
+      }
 
-        if(selectSymbols === true){
-          pass_array.push(special_final);
-        }
+      if(selectSymbols === true){
+        pass_array.push(special_final);
+      }
+      
+      return pass_array;
     }
+    
 
 }
 
