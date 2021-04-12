@@ -14,8 +14,9 @@ function generatePassword() {
   var userInput = parseInt(prompt("Select the length of your password."))
   if (userInput < 8 || userInput > 128 || userInput === null || userInput === "") {
     alert("Invalid input. Please choose a valid length between 8 to 128 characters.")
-    return;
+    return "";
   }
+  
 
   //asking what they want in their password
   var selectLowercase = confirm("Would you like lowercase characters?")
