@@ -6,6 +6,6 @@ Created a password generator with prompts to help the user customize their passw
 
 Links & Images:
 
-Link to Horiseon: https://salask24.github.io/password-generator/
+Link to Password Generator: https://salask24.github.io/password-generator/
 Link to github repo: https://github.com/salask24/password-generator
 ![Screenshot](assets/pwg_screenshot.png)
